@@ -12,7 +12,7 @@ A React Native application that integrates Google Places API for searching locat
 ## Setup
 
 1. Clone the repo:  
-   `git clone https://github.com/yourusername/PlacesSearchApp.git`
+   `git clone https://github.com/L-Thirunavukkarasu/GooglePlaceApi`
 
 2. Install dependencies:  
    `yarn install`
