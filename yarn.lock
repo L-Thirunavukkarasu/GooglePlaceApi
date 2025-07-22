@@ -1849,6 +1849,20 @@
   dependencies:
     undici-types "~7.8.0"
 
+"@types/react-native-maps@^0.24.2":
+  version "0.24.2"
+  resolved "https://registry.yarnpkg.com/@types/react-native-maps/-/react-native-maps-0.24.2.tgz#f88aa0b30a470066c749a2786c52aca356bd4f38"
+  integrity sha512-4nunEtRw4DoER/oagEofZkwdOVmHV2p3FvMrs6aVjVV+WlXnQWs5fIosqdeWI3OJI5SLsAL+6/HRZxGuQ0ts0Q==
+  dependencies:
+    react-native-maps "*"
+
+"@types/react-native@^0.73.0":
+  version "0.73.0"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.73.0.tgz#b316be230745779814caa533360262140b0f5984"
+  integrity sha512-6ZRPQrYM72qYKGWidEttRe6M5DZBEV5F+MHMHqd4TTYx0tfkcdrUFGdef6CCxY0jXU7wldvd/zA/b0A/kTeJmA==
+  dependencies:
+    react-native "*"
+
 "@types/react-test-renderer@^19.1.0":
   version "19.1.0"
   resolved "https://registry.yarnpkg.com/@types/react-test-renderer/-/react-test-renderer-19.1.0.tgz#1d0af8f2e1b5931e245b8b5b234d1502b854dc10"
@@ -1856,7 +1870,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^19.1.0":
+"@types/react@*", "@types/react@^19.1.8":
   version "19.1.8"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-19.1.8.tgz#ff8395f2afb764597265ced15f8dddb0720ae1c3"
   integrity sha512-AwAfQ2Wa5bCx9WP8nZL2uMZWod7J7/JSplxbTmBQ5ms6QpqNYm672H0Vu9ZVKVngQ+ii4R/byguVEUZQyeg44g==
@@ -5484,6 +5498,13 @@ react-native-google-places-autocomplete@^2.5.7:
     qs "~6.9.1"
     uuid "^10.0.0"
 
+react-native-maps@*:
+  version "1.24.10"
+  resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-1.24.10.tgz#e5d9b8e15e480bff89c1cb560a274e5f2a821c97"
+  integrity sha512-Gbx1K1+urx1cBT7tew2Xi4pd/hpKdzCZTg2ayeLj9e86Yt/sc8olEHaDOTg2klNuu9uf3qDXc98aml1mYbzy9g==
+  dependencies:
+    "@types/geojson" "^7946.0.13"
+
 react-native-maps@^1.24.5:
   version "1.24.5"
   resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-1.24.5.tgz#0a131204ef95b913b63df9018339c4ba08a62b22"
@@ -5491,7 +5512,7 @@ react-native-maps@^1.24.5:
   dependencies:
     "@types/geojson" "^7946.0.13"
 
-react-native@0.80.1:
+react-native@*, react-native@0.80.1:
   version "0.80.1"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.80.1.tgz#10b064b2451b606591bd789fcd5d9b59e57c5bf3"
   integrity sha512-cIiJiPItdC2+Z9n30FmE2ef1y4522kgmOjMIoDtlD16jrOMNTUdB2u+CylLTy3REkWkWTS6w8Ub7skUthkeo5w==
@@ -6269,10 +6290,10 @@ typed-array-length@^1.0.7:
     possible-typed-array-names "^1.0.0"
     reflect.getprototypeof "^1.0.6"
 
-typescript@5.0.4:
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.0.4.tgz#b217fd20119bd61a94d4011274e0ab369058da3b"
-  integrity sha512-cW9T5W9xY37cc+jfEnaUvX91foxtHkza3Nw3wkoF4sSlKn0MONdkdEndig/qPBWXNkmplh3NzayQzCiHM4/hqw==
+typescript@^5.8.3:
+  version "5.8.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.8.3.tgz#92f8a3e5e3cf497356f4178c34cd65a7f5e8440e"
+  integrity sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==
 
 unbox-primitive@^1.1.0:
   version "1.1.0"

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, FC } from 'react';
 import {
   View,
   Text,
@@ -9,13 +9,14 @@ import {
 } from 'react-native';
 import { PlacesContext } from '../context/PlacesContext';
 import { samplePlacesArray } from '../utills/storage';
+import { Place } from 'types';
 
 const screenWidth = Dimensions.get('window').width;
 
-export default function SearchHistory() {
+export const SearchHistory: FC = () => {
   const { history, setSelectedPlace } = useContext(PlacesContext);
 
-  const renderItemView = item => {
+  const renderItemView = ({ item }: { item: Place }) => {
     return (
       <TouchableOpacity
         style={styles.item}
@@ -38,13 +39,13 @@ export default function SearchHistory() {
         //here is the place 'history' keyvalue pair comes.due to google places api key invalid - billing account requirement
         data={samplePlacesArray}
         keyExtractor={item => item.place_id}
-        renderItem={({ item }) => renderItemView(item)}
+        renderItem={({ item }) => renderItemView({ item })}
         horizontal
         showsHorizontalScrollIndicator={false}
       />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {

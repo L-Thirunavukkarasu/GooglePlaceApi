@@ -1,19 +1,19 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-
+import { Place } from '../types';
 const HISTORY_KEY = 'places_search_history';
 
-export async function getHistory() {
+
+export async function getHistory(): Promise<Place[]> {
   try {
     const json = await AsyncStorage.getItem(HISTORY_KEY);
     return json ? JSON.parse(json) : [];
-  } catch (e) {
-    console.error('Failed to load history', e);
+  } catch {
     return [];
   }
 }
 
-export async function saveHistory(history) {
-  try {
+
+export async function saveHistory(history: Place[]): Promise<void> {  try {
     await AsyncStorage.setItem(HISTORY_KEY, JSON.stringify(history));
   } catch (e) {
     console.error('Failed to save history', e);

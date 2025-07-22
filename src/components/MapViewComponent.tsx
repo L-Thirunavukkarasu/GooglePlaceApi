@@ -1,22 +1,23 @@
-import React, { useContext, useRef, useEffect } from 'react';
-import MapView, { Marker } from 'react-native-maps';
-import { View, StyleSheet, Dimensions } from 'react-native';
+import React, { useContext, useRef, useEffect, FC } from 'react';
+import { StyleSheet, View, Dimensions } from 'react-native';
+import MapView, { Marker, Region } from 'react-native-maps';
 import { PlacesContext } from '../context/PlacesContext';
 
 const { width, height } = Dimensions.get('window');
 
-export default function MapViewComponent() {
+export const MapViewComponent: FC = () => {
   const { selectedPlace } = useContext(PlacesContext);
-  const mapRef = useRef();
+  const mapRef = useRef<MapView>(null);
 
   useEffect(() => {
-    if (selectedPlace) {
-      mapRef.current.animateToRegion({
+    if (selectedPlace && mapRef.current) {
+      const region: Region = {
         latitude: selectedPlace.location.lat,
         longitude: selectedPlace.location.lng,
         latitudeDelta: 0.01,
         longitudeDelta: 0.01,
-      });
+      };
+      mapRef.current.animateToRegion(region);
     }
   }, [selectedPlace]);
 
@@ -45,9 +46,9 @@ export default function MapViewComponent() {
       </MapView>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
-  map: { width: width, height: height },
+  map: { width, height: height },
 });
